@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: hsl(158, 36%, 37%);
+    --primary-color-alternate: hsl(158, 35%, 31%);
+    --secondary-color: hsl(30, 38%, 92%);
+    --tertiary-color: hsl(212, 21%, 14%);
+    --quaternary-color: hsl(228, 12%, 48%);
+    --white: hsl(255, 100%, 100%);
+    --body-line-height: 1.7em;
+}
+
+html {
+    font-family: 'Montserrat', 'Fraunces', sans-serif, serif;
+    background-color: hsl(30, 38%, 92%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    font-size: 0.8750em;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+#card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 520px;
+    background-color: var(--white);
+    border-radius: 1rem;
+}
+
+#card-left-col,
+#card-right-col {
+    width: 50%;
+    height: 100%;
+}
+
+#card-left-col {
+    border-radius: 1rem 0 0 1rem;
+}
+
+#prod-img-portrait {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem 0 0 1rem;
+}
+
+#prod-img-landscape {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem 0 0 1rem;
+}
+
+#card-right-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.prod-info {
+    margin: 1rem;
+}
+
+#prod-cat-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--quaternary-color);
+}
+
+#prod-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2.4em;
+    color: var(--tertiary-color);
+}
+
+#prod-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: var(--body-line-height);
+    color: var(--quaternary-color);
+}
+
+.prod-price {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+#prod-curr-price {
+    font-family: 'Fraunces', serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+#prod-old-price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--quaternary-color);
+    text-decoration: line-through;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+#add-cart-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.6rem 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--white);
+    text-align: center;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.3em;
+}
+
+#add-cart-btn:hover {
+    background-color: var(--primary-color-alternate);
+    transition: all 200ms ease-in-out;
+}
+
+.add-cart-icon {
+    margin-right: 0.5rem;
+}
+
+#copyright,
+.attributions {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.7em;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--tertiary-color);
+    margin: 2rem auto;
+}
+
+#copyright a,
+.attributions a {
+    text-decoration: none;
+    color: var(--quaternary-color);
+}
+
+#copyright a:hover,
+.attributions a:hover {
+    color: var(--tertiary-color);
+    transition: all 200ms ease-in-out;
+}
+
+@media screen and (min-width: 751px) {
+    #prod-img-landscape {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 815px) {
+    #container {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        margin: 2rem;
+    }
+
+    #card {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    #card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        border-radius: 1rem;
+    }
+
+    #card-left-col {
+        width: 100%;
+        border-radius: 1rem 1rem 0 0;
+        background-size: cover;
+    }
+
+    #card-right-col {
+        width: 100%;
+    }
+
+    #prod-img-portrait {
+        display: none;
+    }
+
+    #prod-img-landscape {
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem 1rem 0 0;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #container {
+        width: 90%;
+        margin: 3rem 1rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #container {
+        min-width: 90%;
+        margin: 3rem 0.5rem;
+    }
+
+    #card-right-col {
+        padding: 0.2rem;
+    }
+
+    #card {
+        min-width: 300px;
+    }
+}
