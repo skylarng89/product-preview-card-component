@@ -8,3 +8,9 @@ The challenge was to build a responsive product preview card that displays the i
 - HTML
 - CSS (no frameworks)
 - Font: <a href="https://fonts.google.com/specimen/Montserrat">Montserrat</a>, <a href="https://fonts.google.com/specimen/Fraunces">Fraunces</a>
+
+#### Desktop Preview
+<img src="desktop_preview.png">
+
+#### Mobile Preview
+<img src="mobile_preview.png" width="360px">
