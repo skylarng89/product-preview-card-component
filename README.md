@@ -11,6 +11,7 @@ The challenge was to build a responsive product preview card that displays the i
 
 #### Desktop Preview
 <img src="desktop_preview.png">
+<br><br><br>
 
 #### Mobile Preview
 <img src="mobile_preview.png" width="360px">
